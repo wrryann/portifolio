@@ -1,0 +1,140 @@
+@font-face {
+    font-family: SanFierro;
+    src: url(/fonts/SFNSText-Medium.otf);
+}
+
+@font-face {
+    font-family: SanFierroBLACK;
+    src: url(/fonts/SFNSDisplay-Black.otf);
+}
+
+* {
+    font-family: sanFierro;
+    margin: 0;
+    color: rgb(217, 217, 217);
+    transition: all .2s ease;
+}
+
+#initialPage {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/imgs/F_sAbB2WgAA_oaD.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+#mainWindow {
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    height: 30rem;
+    border: 0.17rem solid rgba(71, 71, 87, 0.41);
+    border-radius: 7px;
+    padding: 20px;
+    margin: 60px;
+    background-color: rgba(32, 32, 44, 0.488);
+    backdrop-filter: blur(10px);
+}
+
+#leftConteiner {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    height: 55%;
+    width: fit-content;
+    padding: 10px;
+    flex-direction: column;
+
+}
+
+#name {
+    font-size: 6rem;
+    font-family: SanFierroBLACK;
+    font-weight: 100;
+    color: white;
+
+}
+
+#skillsBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    width: 5.0rem;
+    height: 2.1rem;
+    border: 0.17rem solid rgba(71, 71, 87, 0.522);
+    border-radius: 5px;
+    background-color: rgba(71, 71, 87, 0.522);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.355);
+    margin-bottom: 2px;
+    color: yellow;
+    cursor: pointer;
+}
+
+#skillsBtn:hover {
+    border: 0.17rem solid rgba(112, 112, 128, 0.522);
+}
+
+#skills {
+    display: none;
+    align-items: center;
+    width: auto;
+    border: 0.17rem solid rgba(71, 71, 87, 0.522);
+    border-radius: 0 13px 13px 13px;
+    background-color: rgba(71, 71, 87, 0.522);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.355);
+    padding: 2px;
+    position: absolute;
+    bottom: 175px;
+    z-index: 888;
+}
+
+.skillImg {
+    height: auto;
+    width: 40px;
+    margin: 4px;
+}
+
+#bottomConteiner {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    height: 45%;
+    width: 100%;
+    bottom: 0;
+
+}
+
+#btnProjects {
+    height: 2.9rem;
+    width: 10rem;
+    border: 0.17rem solid rgba(71, 71, 87, 0.522);
+    border-radius: 13px;
+    font-size: 20px;
+    background-color: rgba(71, 71, 87, 0.522);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.355);
+    cursor: pointer;
+}
+
+@media (max-width: 440px) {
+    #mainWindow {
+        width: 100vw;
+        height: 30rem;
+        border-radius: 7px;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    #name {
+        font-size: 5.3rem;
+        font-family: SanFierroBLACK;
+        font-weight: 100;
+        color: white;
+    
+    }
+}
