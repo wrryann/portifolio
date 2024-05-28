@@ -4,83 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
-    <title>Document</title>
+    <title>wrryann</title>
 </head>
 <body>
+
     <!-- ========== -->
     <!-- initalPage -->
     <!-- ========== -->
 
     <section id="initialPage">
-        <div id="mainWindow">
-            <div id="leftConteiner">
-                <h1 id="name">wrryan</h1>
-                <div id="aboutCont">
-                <button id="skillsBtn">
-                <svg width="25" height="20" viewBox="0 0 201 317" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path id="Vector 3" d="M119.676 91.9891V19.7284C119.676 1.63905 95.174 -3.93486 87.3487 12.3743L4.68539 184.657C-0.729309 195.942 7.49556 209.011 20.0124 209.011H66.6487C76.0375 209.011 83.6487 216.622 83.6487 226.011V297.011C83.6487 315.167 108.292 320.68 116.028 304.255L196.581 133.233C201.892 121.957 193.665 108.989 181.201 108.989H136.676C127.287 108.989 119.676 101.378 119.676 91.9891Z" fill="yellow" stroke="#F3EA21" stroke-width="10"/>
-                </svg>
-                skills</button>
-                <button id="skillsBtn">
-                    <svg width="25" height="20" viewBox="0 0 201 317" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path id="Vector 3" d="M119.676 91.9891V19.7284C119.676 1.63905 95.174 -3.93486 87.3487 12.3743L4.68539 184.657C-0.729309 195.942 7.49556 209.011 20.0124 209.011H66.6487C76.0375 209.011 83.6487 216.622 83.6487 226.011V297.011C83.6487 315.167 108.292 320.68 116.028 304.255L196.581 133.233C201.892 121.957 193.665 108.989 181.201 108.989H136.676C127.287 108.989 119.676 101.378 119.676 91.9891Z" fill="yellow" stroke="#F3EA21" stroke-width="10"/>
+
+        <aside id="informationAndLinks">
+            <img id="img-profile_picture" src="imgs/fd61a4db56ad711d36768f3c0c3b0a52.jpg" alt="profile_picture" style="border-radius: 50%;">
+            <h2>/wrryann</h2>
+            <div id="social-links">  
+                <a id="github-link" class="social-link" href="https://github.com/wrryann">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="30" height="30">
+                    <g>
+                        <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M12,0.296c-6.627,0-12,5.372-12,12c0,5.302,3.438,9.8,8.206,11.387   c0.6,0.111,0.82-0.26,0.82-0.577c0-0.286-0.011-1.231-0.016-2.234c-3.338,0.726-4.043-1.416-4.043-1.416   C4.421,18.069,3.635,17.7,3.635,17.7c-1.089-0.745,0.082-0.729,0.082-0.729c1.205,0.085,1.839,1.237,1.839,1.237   c1.07,1.834,2.807,1.304,3.492,0.997C9.156,18.429,9.467,17.9,9.81,17.6c-2.665-0.303-5.467-1.332-5.467-5.93   c0-1.31,0.469-2.381,1.237-3.221C5.455,8.146,5.044,6.926,5.696,5.273c0,0,1.008-0.322,3.301,1.23   C9.954,6.237,10.98,6.104,12,6.099c1.02,0.005,2.047,0.138,3.006,0.404c2.29-1.553,3.297-1.23,3.297-1.23   c0.653,1.653,0.242,2.873,0.118,3.176c0.769,0.84,1.235,1.911,1.235,3.221c0,4.609-2.807,5.624-5.479,5.921   c0.43,0.372,0.814,1.103,0.814,2.222c0,1.606-0.014,2.898-0.014,3.293c0,0.319,0.216,0.694,0.824,0.576   c4.766-1.589,8.2-6.085,8.2-11.385C24,5.669,18.627,0.296,12,0.296z"/>
+                    </g>
                     </svg>
-                    skills</button>
-                </div>
-                <div id="skills">
-                    <img class="skillImg" src="imgs/html.png" alt="HTML5">
-                    <img class="skillImg" src="imgs/CSS3_logo_and_wordmark.svg.png" alt="CSS3">
-                    <img class="skillImg" src="imgs/js.png" alt="JavaScript">
-                    <img class="skillImg" src="imgs/bootstrap-stack.png" alt="Boostrap">
-                    <img class="skillImg" src="imgs/react.png" alt="React.js">
-                    <!-- <img class="skillImg" src="imgs/node.png" alt="Node.js"> still learning -->
-                    <!-- <img class="skillImg" src="imgs/rust.png" alt="rust"> still learning --> 
-                    <script>
-                            let skillsBtn = document.getElementById("skillsBtn")
-                            let skillsCont = document.getElementById("skills")
-
-                            skillsBtn.addEventListener("click", () => {
-                                if(skillsCont.style.display == "none" || skillsCont.style.display == ""){
-                                    skillsCont.style.display = "flex"
-                                } else {
-                                    skillsCont.style.display = "none"
-                                }
-                            })
-                    </script>
-                </div>
-            </div>
-            <div id="bottomConteiner">
-                <a href="#projects" id="btnProjects">
-                    projects
+                </a> 
+                <a id="linkedin-link" class="social-link" href="https://www.linkedin.com/in/wrryann">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="30" height="30">
+                    <g>
+                    <path id="Path_2520" d="M17.291,19.073h-3.007v-4.709c0-1.123-0.02-2.568-1.564-2.568c-1.566,0-1.806,1.223-1.806,2.487v4.79H7.908   V9.389h2.887v1.323h0.04c0.589-1.006,1.683-1.607,2.848-1.564c3.048,0,3.609,2.005,3.609,4.612L17.291,19.073z M4.515,8.065   c-0.964,0-1.745-0.781-1.745-1.745c0-0.964,0.781-1.745,1.745-1.745c0.964,0,1.745,0.781,1.745,1.745   C6.26,7.284,5.479,8.065,4.515,8.065L4.515,8.065 M6.018,19.073h-3.01V9.389h3.01V19.073z M18.79,1.783H1.497   C0.68,1.774,0.01,2.429,0,3.246V20.61c0.01,0.818,0.68,1.473,1.497,1.464H18.79c0.819,0.01,1.492-0.645,1.503-1.464V3.245   c-0.012-0.819-0.685-1.474-1.503-1.463"/>
+                    </g>
+                    </svg>
                 </a>
-                <div id="">
-                    
-                </div>
+                <a  id="youtube-link" class="social-link" href="https://www.youtube.com/channel/UCfVmrtp8Sg7UDRk1at14RkA">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="30" height="30">
+                    <g id="XMLID_184_">
+                    <path d="M23.498,6.186c-0.276-1.039-1.089-1.858-2.122-2.136C19.505,3.546,12,3.546,12,3.546s-7.505,0-9.377,0.504   C1.591,4.328,0.778,5.146,0.502,6.186C0,8.07,0,12,0,12s0,3.93,0.502,5.814c0.276,1.039,1.089,1.858,2.122,2.136   C4.495,20.454,12,20.454,12,20.454s7.505,0,9.377-0.504c1.032-0.278,1.845-1.096,2.122-2.136C24,15.93,24,12,24,12   S24,8.07,23.498,6.186z M9.546,15.569V8.431L15.818,12L9.546,15.569z"/>
+                    </g>
+                    </svg>
+                </a>
+                
             </div>
-        </div>
+        </aside>
+
+        <main id="main">
+            <div id="aboutText">
+                <h1 id="stack-text">backend developer</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque pariatur nihil quasi accusamus sint et! Exercitationem, et sed accusamus enim accusantium maxime nobis quidem cum ipsa? Fuga explicabo vero excepturi?</p>
+            </div>
+            <!-- ======== -->
+            <!-- Projects -->
+            <!-- ======== -->
+            <div id="projects">
+                <h3>Projects</h3>
+                <div id="projects-div">
+                    <div class="project">
+                    
+                    </div>
+                    <div class="project">
+                    
+                    </div>
+                    <div class="project">
+                    
+                    </div>
+                    <div class="project">
+                    
+                    </div>
+                    <div class="project">
+                    
+                    </div>
+                    <div class="project">
+                    
+                    </div>
+                    <div class="project">
+                    
+                    </div>
+                    <div class="project">
+                    
+                    </div>
+                    <div class="project">
+                    
+                    </div>
+                    <div class="project">
+                    
+                    </div>
+                    <div class="project">
+                    
+                    </div>
+                    <div class="project">
+                    
+                    </div>
+
+                </div>
+                
+            </div>
+        </main>
     </section>
 
-    <!-- ======== -->
-    <!-- Projects -->
-    <!-- ======== -->
+   
 
-    <section id="projects">
-        <div class="project">
-
-        </div>
-        <div class="project">
-
-        </div>
-        <div class="project">
-
-        </div>
-        <div class="project">
-
-        </div>
-        <div class="project">
-
-        </div>
-    </section>
   <script src="/js/index.js"></script>  
 </body>
 </html>

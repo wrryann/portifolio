@@ -1,24 +1,18 @@
 @font-face {
-    font-family: SanFierro;
+    font-family: sf;
     src: url(/fonts/SFNSText-Medium.otf);
 }
 
 @font-face {
-    font-family: SanFierroBLACK;
+    font-family: sfB;
     src: url(/fonts/SFNSDisplay-Black.otf);
 }
 
 * {
-    font-family: sanFierro;
+    font-family: sf;
     margin: 0;
     color: rgb(217, 217, 217);
     transition: all .2s ease;
-}
-
-body {
-    background-image: url(/imgs/F_sAbB2WgAA_oaD.png);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #initialPage {
@@ -27,176 +21,163 @@ body {
     width: 100vw;
     justify-content: center;
     align-items: center;
-    background-image: url(/imgs/F_sAbB2WgAA_oaD.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-
+    background-color: #20202a;
 }
 
-#mainWindow {
-    display: flex;
-    flex-direction: column;
-    width: 35rem;
-    height: 30rem;
-    border: 0.17rem solid rgba(71, 71, 87, 0.41);
-    border-radius: 7px;
-    padding: 20px;
-    margin: 60px;
-    background-color: rgba(32, 32, 44, 0.488);
-    backdrop-filter: blur(10px);
+h1 {
+    font-family: sfB;
+    font-size: 80px;
+    font-weight: 200;
 }
 
-#leftConteiner {
-    display: flex;
-    align-items: start;
-    justify-content: end;
-    height: 55%;
-    width: 60%;
-    padding: 10px;
-    flex-direction: column;
 
-}
-
-#name {
-    font-size: 6rem;
-    font-family: SanFierroBLACK;
+h2 {
+    font-family: sfB;
+    font-size: 30px;
     font-weight: 100;
-    color: white;
-
 }
 
-#aboutCont {
-    display: flex;
-    width: 10.3rem;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
+h3 {
+    font-family: sf;
+    font-size: 25px;
+    /* font-weight: 400; */
 }
 
-#skillsBtn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 15px;
-    width: 5.0rem;
-    height: 2.1rem;
-    border: 0.17rem solid rgba(71, 71, 87, 0.522);
-    border-radius: 5px;
-    background-color: rgba(71, 71, 87, 0.522);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.355);
-    margin-bottom: 2px;
-    color: yellow;
-    cursor: pointer;
+p {
+    font-family: sf;
+    font-size: 21px;
 }
 
-#skillsBtn:hover {
-    border: 0.17rem solid rgba(112, 112, 128, 0.522);
-}
-
-#skills {
-    display: none;
-    align-items: center;
+hr {
+    border: #34343E 1px solid;
     width: auto;
-    border: 0.17rem solid rgba(71, 71, 87, 0.522);
-    border-radius: 0 13px 13px 13px;
-    background-color: rgba(71, 71, 87, 0.522);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.355);
-    padding: 2px;
-    position: absolute;
-    bottom: 175px;
-    z-index: 888;
+    margin: 5px;
 }
 
-.skillImg {
-    height: auto;
-    width: 40px;
-    margin: 4px;
-    cursor: pointer;
-    transition: all .3s ease;
+body {
+    background-color: #20202a;
 }
 
-.skillImg:hover {
-    transform: translateY(-5px);
-    top: 1px;
-}
 
-#bottomConteiner {
+#informationAndLinks {
     display: flex;
-    justify-content: end;
-    flex-direction: column;
-    height: 45%;
-    width: 100%;
-    bottom: 0;
-
-}
-
-#btnProjects {
-    display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    text-decoration: none;
-    height: 2.9rem;
-    width: 10rem;
-    border: 0.17rem solid rgba(71, 71, 87, 0.522);
-    border-radius: 13px;
-    font-size: 20px;
-    background-color: rgba(71, 71, 87, 0.522);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.355);
-    cursor: pointer;
-}
-
-#btnProjects:hover {
-    border: 0.17rem solid rgba(112, 112, 128, 0.796);
-    color: white; 
-}
-
-/* ======== */
-/* Projects */
-/* ======== */
-
-#projects {
-    margin: auto;
-    width: 100;
-    height: auto;
-    margin-bottom: 10vh;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.project {
-    display: flex;
-    justify-content: flex-start;
     flex-direction: column;
-    width: 14rem;
-    height: 19rem;
-    border: 0.17rem solid rgba(71, 71, 87, 0.41);
-    border-radius: 7px;
-    padding: 20px;
-    margin: calc(100vw/120);
-    background-color: rgba(32, 32, 44, 0.488);
-    backdrop-filter: blur(10px);
+    background-color: #20202a;
+    box-shadow: 0 45px 85px rgba(0, 0, 0, 0.251);
+    border-radius: 20px;
+    border: #34343E 1px solid;
+    margin: 20px;
+    height: 90%;
+    width: 30%;
 }
 
-@media (max-width: 440px) {
-    #mainWindow {
+    #img-profile_picture {
+        width: fit-content;
+        max-width: 90%;
+        margin-top: 20px;
+    }
+
+    #social-links {
+        background-color: #20202a;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.251);
+        border-radius: 10px;
+        padding: 10px;
+        border: #34343E 1px solid;
+    }
+
+    #social-links:hover {
+        box-shadow: 0 20px 45px rgba(1, 255, 251, 0.251);
+    }
+
+    .social-link {
+        margin: 0 5px 0 5px;
+        text-decoration: none;
+        transition: all .3s ease;
+    }
+
+    .social-link:hover svg {
+        margin: 0 10px 0 10px;
+        transform: scale(1.3);
+    }
+
+
+#main {
+    width: 70%;
+    height: 90%;
+    margin: 20px;
+}
+
+    #stack-text {
+        font-size: 7vw;
+    }
+
+    #aboutText {
+        height: 40%;
+        /* background-color: floralwhite; */
+    }
+
+    #projects {
+        display: flex;
+        justify-content: space-between;
+        height: 60%;
+        width: 95%;
+        flex-direction: column;
+        /* background-color: blueviolet; */
+    }
+
+        #projects-div {
+            overflow-x: auto;
+            overflow-y: hidden;
+            border: #34343E 1px solid;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.251);
+            border-radius: 20px;
+            margin-top: 10px;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .project {
+            background-color: #20202a;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.251);
+            border-radius: 20px;
+            border: #34343E 1px solid;
+            height: 300px;
+            width: 230px;
+            margin: 14px;
+            display: inline-block;
+        }
+
+@media (max-width: 950px) {
+
+
+    #initialPage {
+        height: 200vh;
         width: 100vw;
-        height: 30rem;
-        border-radius: 7px;
-        padding: 20px;
-        margin: 10px;
+        flex-direction: column;
     }
 
-    #name {
-        font-size: 5.3rem;
-        font-family: SanFierroBLACK;
-        font-weight: 100;
-        color: white;
-    
+    #informationAndLinks {
+        margin: 5vh 10vw 5vh 10vw;
+        height: 90vh;
+        width: 90vw;
     }
+
+        #img-profile_picture {
+            width: fit-content;
+            max-width: 70%;
+            margin-top: 20px;
+        }
+
+    #main {
+        width: 90vw;
+        height: 100vh;
+    }
+
+    #stack-text {
+        font-size: 9vw;
+    }
+
+
 }
-
-
