@@ -5,7 +5,7 @@ node_modules/
 .env
 
 js/
-index.js
+
 # Ignore log files
 logs/
 *.log
