@@ -1,12 +1,12 @@
 
 :root {
-    --main-color: #24242f;  
-    --border-color: #303038 1px solid;
+    --main-color: #14141b;  
+    --border-color: #232326 1px solid;
 
-    --btn-color: #21212a;
-    --btn-border: #303039 1px solid;
+    --btn-color: #1414141b;
+    --btn-border: #232326 1px solid;
 
-    --main-font-color: #ababab;
+    --main-font-color: #c9c9c9;
     --h1-h3-font-color: #ffffff;
     --link-font-color: rgb(24, 59, 255);
   }
