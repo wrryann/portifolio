@@ -1,78 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <title>wrryann</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>wrryann | Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-weight: 560;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0e0e0e;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #111;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #444;
+    }
+
+    header h1 {
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+
+    nav {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: #f0f0f0;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #aaa;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #ccc;
+    }
+
+    .buttons {
+        background-color: #333;
+        border: #55555557 1px solid;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .project {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    }
+
+    .project h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .project p {
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: #333;
+      border: #55555557 1px solid;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: 0.2s;
+    }
+
+    a.button:hover {
+      background-color: #555;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- ========== -->
-    <!-- initalPage -->
-    <!-- ========== -->
+  <header>
+    <img src="imgs/icon.webp" alt="Black Kray image" />
+    <h1>wrryann</h1>
+    <p>Scripter • Builder • UI Designer</p>
+  </header>
 
-    <section id="initialPage">
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-        <aside id="informationAndLinks">
-            <img id="img-profile_picture" src="imgs/548279cc28d5c0fea20db76e0c0f4101.jpg" alt="profile_picture">
-            <h2>/wrryann</h2>
-            <div id="social-links">  
-                <a id="github-link" class="social-link" href="https://github.com/wrryann">
-                    <?xml version="1.0" encoding="UTF-8"?>
-                    <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="30" height="30">
-                    <g>
-                        <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M12,0.296c-6.627,0-12,5.372-12,12c0,5.302,3.438,9.8,8.206,11.387   c0.6,0.111,0.82-0.26,0.82-0.577c0-0.286-0.011-1.231-0.016-2.234c-3.338,0.726-4.043-1.416-4.043-1.416   C4.421,18.069,3.635,17.7,3.635,17.7c-1.089-0.745,0.082-0.729,0.082-0.729c1.205,0.085,1.839,1.237,1.839,1.237   c1.07,1.834,2.807,1.304,3.492,0.997C9.156,18.429,9.467,17.9,9.81,17.6c-2.665-0.303-5.467-1.332-5.467-5.93   c0-1.31,0.469-2.381,1.237-3.221C5.455,8.146,5.044,6.926,5.696,5.273c0,0,1.008-0.322,3.301,1.23   C9.954,6.237,10.98,6.104,12,6.099c1.02,0.005,2.047,0.138,3.006,0.404c2.29-1.553,3.297-1.23,3.297-1.23   c0.653,1.653,0.242,2.873,0.118,3.176c0.769,0.84,1.235,1.911,1.235,3.221c0,4.609-2.807,5.624-5.479,5.921   c0.43,0.372,0.814,1.103,0.814,2.222c0,1.606-0.014,2.898-0.014,3.293c0,0.319,0.216,0.694,0.824,0.576   c4.766-1.589,8.2-6.085,8.2-11.385C24,5.669,18.627,0.296,12,0.296z"/>
-                    </g>
-                    </svg>
-                </a> 
-                <a id="linkedin-link" class="social-link" href="https://www.linkedin.com/in/wrryann">
-                    <?xml version="1.0" encoding="UTF-8"?>
-                    <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="30" height="30">
-                    <g>
-                    <path id="Path_2520" d="M17.291,19.073h-3.007v-4.709c0-1.123-0.02-2.568-1.564-2.568c-1.566,0-1.806,1.223-1.806,2.487v4.79H7.908   V9.389h2.887v1.323h0.04c0.589-1.006,1.683-1.607,2.848-1.564c3.048,0,3.609,2.005,3.609,4.612L17.291,19.073z M4.515,8.065   c-0.964,0-1.745-0.781-1.745-1.745c0-0.964,0.781-1.745,1.745-1.745c0.964,0,1.745,0.781,1.745,1.745   C6.26,7.284,5.479,8.065,4.515,8.065L4.515,8.065 M6.018,19.073h-3.01V9.389h3.01V19.073z M18.79,1.783H1.497   C0.68,1.774,0.01,2.429,0,3.246V20.61c0.01,0.818,0.68,1.473,1.497,1.464H18.79c0.819,0.01,1.492-0.645,1.503-1.464V3.245   c-0.012-0.819-0.685-1.474-1.503-1.463"/>
-                    </g>
-                    </svg>
-                </a>
-                <a  id="youtube-link" class="social-link" href="https://www.youtube.com/channel/UCfVmrtp8Sg7UDRk1at14RkA">
-                    <?xml version="1.0" encoding="UTF-8"?>
-                    <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="30" height="30">
-                    <g id="XMLID_184_">
-                    <path d="M23.498,6.186c-0.276-1.039-1.089-1.858-2.122-2.136C19.505,3.546,12,3.546,12,3.546s-7.505,0-9.377,0.504   C1.591,4.328,0.778,5.146,0.502,6.186C0,8.07,0,12,0,12s0,3.93,0.502,5.814c0.276,1.039,1.089,1.858,2.122,2.136   C4.495,20.454,12,20.454,12,20.454s7.505,0,9.377-0.504c1.032-0.278,1.845-1.096,2.122-2.136C24,15.93,24,12,24,12   S24,8.07,23.498,6.186z M9.546,15.569V8.431L15.818,12L9.546,15.569z"/>
-                    </g>
-                    </svg>
-                </a>
-                
-            </div>
-            <div id="summary">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, possimus exercitationem! Labore impedit praesentium cumque quos libero, reiciendis est excepturi, velit quod quia nam aliquam cupiditate laudantium ipsum, ad enim?</p>
-                <a style="text-decoration: none; margin: 10px 0 10px 0;" href="#main" class="button">
-                    read more
-                </a>
-            </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hey — I'm Ryan, also known as wrryann. I build cool stuff on Roblox, design clean UIs, and script systems for all kinds of experiences. I’ve been creating for over 2 years, always learning and experimenting with new ideas.
+    </p>
+  </section>
 
-        </aside>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>Sci-fi Sword System</h3>
+        <p>Fully scripted combo-based sword with dash, FX and double-jump logic.</p>
+      </div>
+      <div class="project">
+        <h3>UI Pack for Simulators</h3>
+        <p>A clean, modern UI pack for Roblox simulator games — fully animated.</p>
+      </div>
+      <div class="project">
+        <h3>Obby Builder Tool</h3>
+        <p>Custom tool for users to build their own obbies in-game, with snapping and grid logic.</p>
+      </div>
+      <!-- add more projects here -->
+    </div>
+  </section>
 
-        <main id="main">
-            <div id="aboutText">
-                <h1 id="stack-text">backend developer</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque pariatur nihil quasi accusamus sint et! Exercitationem, et sed accusamus enim accusantium maxime nobis quidem cum ipsa? Fuga explicabo vero excepturi?</p>
-            </div>
-            <!-- ======== -->
-            <!-- Projects -->
-            <!-- ======== -->
-            <div id="projects">
-                <h3>Projects</h3>
-                <div id="projects-div">
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Want to work with me? Reach out!</p>
+    <p>Email: <a href="mailto:wrryann@example.com">wrryann@example.com</a></p>
+    <p>Discord: wrryann#0001</p>
+    <a href="https://Roblox.com/ryan123" class="button" target="_blank">My Roblox Profile</a>
+  </section>
 
-                </div>
-                
-            </div>
-        </main>
-    </section>
-    <script src="js/index.js"></script>
+  <footer>
+    &copy; 2025 wrryann — All rights reserved.
+  </footer>
+
 </body>
 </html>
