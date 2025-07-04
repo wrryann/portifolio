@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --mainColor: #0e0e0e;
+    --secundaryColor: #333;
+    --border: #55555557 2px solid;
+    --borderHover: #87878762 2px solid;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 560;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0e0e0e;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+    header {
+      background-color: #111;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header img {
+      border-radius: 2p;
+      object-fit: cover;
+      border: 2px solid #a9a9a959;
+    }
+
+    header h1 {
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+
+    nav {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: #f0f0f0;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #aaa;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #ccc;
+    }
+
+    .transparent {
+        background-color: transparent;
+        border: none;
+        outline: none;        /* removes blue border on click (for buttons) */
+        color: inherit;       /* keeps text color consistent */
+        cursor: pointer;      /* shows pointer cursor when hovering */
+    }
+
+
+
+    .scroll {
+      display: flex;
+      overflow-x: scroll;
+      width: 70vw;
+      height: auto;
+      background-color: var(--secundaryColor);
+      border: var(--border);
+    }
+
+    .scroll img {
+      height: 9rem;
+      border-radius: 2rem;
+    }
+
+    .button {
+        border: var(--border);
+        display: inline-block;
+        padding: 0.3rem 0.8rem;
+        background-color: var(--secundaryColor);
+        color: #fff;
+        border-radius: 10px;
+        text-decoration: none;
+        margin-top: 1rem;
+        transition: 0.2s;
+    }
+
+    .button:hover {
+        border: var(--borderHover) ;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .project {
+      background-color: var(--secundaryColor);
+      padding: 1rem;
+      border: var(--border);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    }
+
+    .project h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .project p {
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
