@@ -59,12 +59,23 @@ body {
       padding: 3rem 1rem;
       max-width: 900px;
       margin: 0 auto;
+      display: flex;
+      align-items: center;
+
     }
 
     h2 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
       color: #ccc;
+    }
+
+    .list {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+      z-index: auto;
     }
 
     .transparent {
@@ -109,7 +120,7 @@ body {
 
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 2rem;
     }
 
