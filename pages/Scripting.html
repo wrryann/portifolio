@@ -11,20 +11,42 @@
     <section id="projects" class="list">
     <h2>Projects</h2>
     <div class="project-grid">
+
       <div class="project">
+        <img src="../imgs/43f72f82ddb23a76c5d17bec9ef3dd62.jpg" alt="">
+        <div class="programming-language"> 
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+          <p>dih  </p>
+        </svg>
+
+        </div>
         <h3>Sci-fi Sword System</h3>
         <p>Fully scripted combo-based sword with dash, FX and double-jump logic.</p>
       </div>
+
       <div class="project">
-        <h3>UI Pack for Simulators</h3>
-        <p>A clean, modern UI pack for Roblox simulator games — fully animated.</p>
+        <h3>Sci-fi cuz System</h3>
+        <p>Fully scripted combo-based sword with dash, FX and double-jump logic.</p>
       </div>
-      <div class="project">
-        <h3>Obby Builder Tool</h3>
-        <p>Custom tool for users to build their own obbies in-game, with snapping and grid logic.</p>
-      </div>
+
       <!-- add more projects here -->
     </div>
   </section>
+  <script type="module">
+    import { greet } from '../scripts/index.js';
+
+    console.log(greet(2)); // works!
+
+    let parent = document.querySelector('#projects .project-grid');
+
+    let element = document.createElement('div');
+    element.classList.add('project');
+    parent.parentElement.appendChild(element);
+    element.innerHTML = `
+      <img src="../imgs/43f72f82ddb23a76c5d17bec9ef3dd62.jpg" alt="">
+      <div class="programming-language">  
+      `
+  </script>
 </body>
 </html>

@@ -2,9 +2,13 @@
 
 :root {
     --mainColor: #0e0e0e;
-    --secundaryColor: #333;
+    --secundaryColor: #151515;
+
     --border: #55555557 2px solid;
     --borderHover: #87878762 2px solid;
+
+    --textColorMain: #f0f0f0;
+    --textColor: #afafaf;
 }
 
 * {
@@ -12,12 +16,14 @@
     padding: 0;
     box-sizing: border-box;
     font-weight: 560;
+    transition: ease 0.5s;
+
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter';
     background-color: #0e0e0e;
-    color: #f0f0f0;
+    color: var(--textColor);
     line-height: 1.6;
 }
 
@@ -64,10 +70,25 @@ body {
 
     }
 
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--textColorMain);
+      font-weight: 750;
+    }
+
     h2 {
       font-size: 1.8rem;
+      font-weight: 650;
       margin-bottom: 1rem;
-      color: #ccc;
+      color: var(--textColorMain);
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 570;
+      margin-bottom: 1rem;
+      color: var(--textColorMain);
     }
 
     .list {
@@ -91,7 +112,7 @@ body {
     .scroll {
       display: flex;
       overflow-x: scroll;
-      width: 70vw;
+      width: 100%;
       height: auto;
       background-color: var(--secundaryColor);
       border: var(--border);
@@ -120,8 +141,10 @@ body {
 
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      padding: 16px;
+
     }
 
     .project {
@@ -129,17 +152,50 @@ body {
       padding: 1rem;
       border: var(--border);
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.391);
+      cursor: pointer;
     }
 
-    .project h3 {
-      margin-bottom: 0.5rem;
+    .project:hover {
+      background-color: var(--secundaryColor);
+      transform: scale(1.03);
     }
 
-    .project p {
-      font-size: 0.9rem;
-      color: #bbb;
-    }
+      .programming-language {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ff0000;
+        color: #fff;
+        width: fit-content;
+        height: 1.6rem;
+        border-radius: 100rem;
+        padding: 0.5rem;
+        
+      }
+
+      .programming-language svg {
+        height: 20px
+      }
+      
+      .programming-language p {
+        margin-left: 0.2rem;
+        font-size: 0.9rem;
+        color: rgb(255, 255, 255);
+      }
+
+      .project h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      .project img {
+        width: 100%;
+        height: 10rem;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        object-fit: cover;
+      }
+
 
     footer {
       background-color: #111;
