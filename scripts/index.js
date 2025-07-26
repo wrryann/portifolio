@@ -23,8 +23,8 @@ class Project {
 
   }
 
-  sayHello() {
-    console.log("Hi, I'm " + this.title);
+  BuildHTML() {
+    
   }
 }
 
