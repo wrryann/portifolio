@@ -123,6 +123,10 @@ body {
       border-radius: 2rem;
     }
 
+    .scroll img:hover {
+      
+    }
+
     .button {
         border: var(--border);
         display: inline-block;
@@ -139,12 +143,23 @@ body {
         border: var(--borderHover) ;
     }
 
-    .project-grid {
+    #project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 16px;
       padding: 16px;
 
+    }
+
+    .projects-icons {
+      background-color: var(--secundaryColor);
+    }
+
+    .projects-icons:hover {
+      background-color: var(--secundaryColor);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.391);
+      border: rgba(255, 255, 255, 0.175) 2px solid;
     }
 
     .project {
@@ -158,7 +173,9 @@ body {
 
     .project:hover {
       background-color: var(--secundaryColor);
-      transform: scale(1.03);
+      transform: scale(1.005);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.391);
+      border: rgba(255, 255, 255, 0.175) 2px solid;
     }
 
       .programming-language {
@@ -190,7 +207,7 @@ body {
 
       .project img {
         width: 100%;
-        height: 10rem;
+        height: 8.8rem;
         border-radius: 10px;
         margin-bottom: 1rem;
         object-fit: cover;
