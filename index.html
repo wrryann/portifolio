@@ -13,32 +13,29 @@
 </head>
 <body>
 
+  <script src="/scripts/index.js" type="module"></script>
+
   <header>
     <img src="imgs/icon.webp" alt="Black Kray image" height="150px" />
     <h1>wrryann</h1>
-    <p>Scripter • Builder • UI Designer</p>
-    <div class="list">
-      <a href="pages/projects.html" class="transparent" class="projects-icons" target="_blank">
-        <img src="imgs/script.webp" alt="">
-      </a>  
-      <a href="pages/projects.html" class="transparent" target="_blank">
-        <img src="imgs/bulding.webp" alt="">
-      </a>
-      <a href="pages/Scripting.html" class="transparent" target="_blank">
-        <img src="imgs/liljew.jpg" alt="">
-      </a>
-    </div>
+    <p><b>Scripter</b> and <b>Builder</b></p>
   </header>
 
   <section class="list" id="about">
     <h2>About Me</h2>
     <div>
       <p>
-        Hey — I'm Ryan, also known as wrryann. I build cool stuff on Roblox, design clean UIs, and script systems for all kinds of experiences. I’ve been creating for over 2 years, always learning and experimenting with new ideas.
+        Hey — I'm wrryan. I script systems for all kinds of experiences and build cool stuff on Roblox.
       </p>
     </div>
 
   </section>
+
+  <div class="flyer" >
+    <a href="pages/projects.html" class="transparent" class="projects-icons"  target="_blank">
+        <img src="imgs/contact_me.webp" alt="">
+      </a>  
+  </div>
 
   <section>
     <div class="scroll" class="list">
@@ -50,7 +47,7 @@
         <img src="imgs/bulding.webp" alt="">
       </a>
       <a href="pages/Scripting.html" class="transparent" target="_blank">
-        <img src="imgs/liljew.jpg" alt="">
+        <img src="imgs/gamesIMade.webp" alt="">
       </a>
     </div>
         
@@ -58,7 +55,7 @@
 
   <section id="contact" class="list">
     <h2>Contact me!</h2>
-    <p>Want to work with me? Reach out!</p>
+    <p Want to work with me? Reach out!</p>
     <p>Email: <a href="mailto:wrryann@gmail.com">wrryann@gmail.com</a></p>
     <div>
       <a href="" class="button" target="_blank">discord</a>
@@ -70,8 +67,37 @@
   </section>
 
   <footer>
-    made with so much hate by wrryann
+    made with so much hate by wrryann. this image is from pinterest btw  not mine
   </footer>
-  <script src="/scripts/index.js"></script>
+
+    <script>
+    if (localStorage.getItem("seenFootage") === null) {
+      let parent = document.body
+
+      let element = document.createElement('div');
+      parent.appendChild(element);
+
+      setTimeout(() => {
+        element.remove();
+      }, 4000); // tempo do gif em ms
+      
+      element.innerHTML = `
+        <img src="imgs/cat-explode-cat-meme.gif" alt="" style="
+          position: fixed;
+          bottom: 0;
+          right: 2px;
+          top: 2px;
+          justify-content: end;
+          align-items: center;
+          z-index: 10;
+          width: 100vw;
+          height: 100vh;
+          ">>
+      `
+
+      localStorage.setItem("seenFootage", "yep")
+      
+    }
+  </script>
 </body>
 </html>

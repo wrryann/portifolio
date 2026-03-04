@@ -21,6 +21,10 @@ const type = {
   other: 'Other',
 }
 
+window.addEventListener("load", () => {
+  console.log("Usuário entrou no site")
+})
+
 function getYouTubeThumbnail(videoUrl) {
   const videoId = videoUrl.split("v=")[1]?.split("&")[0]; // extract the ID from the URL
   if (!videoId) return null;
@@ -41,7 +45,7 @@ class Project {
 
   }
 
-  BuildHTML() {
+BuildHTML() {
     let parent = document.querySelector('#project-grid');
 
     let element = document.createElement('div');
@@ -60,9 +64,7 @@ class Project {
         <h3>${this.title}</h3>
         <p>${this.description}</p>   
       `
-
-      
-  }
+    }
 }
 
 

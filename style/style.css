@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --mainColor: #0e0e0e;
-    --secundaryColor: #151515;
+    --mainColor: #0e0e0e3a;
+    --secundaryColor: #15151568;
 
-    --border: #55555557 2px solid;
-    --borderHover: #87878762 2px solid;
+    --border: #ababab57 1px solid;
+    --borderHover: #ececec79 1px solid;
 
-    --textColorMain: #f0f0f0;
-    --textColor: #afafaf;
+    --textColorMain: #f7f7f7;
+    --textColor: #f1f1f1;
+
+    --specialColor: #45ee2b;
 }
 
 * {
@@ -16,21 +18,24 @@
     padding: 0;
     box-sizing: border-box;
     font-weight: 560;
-    transition: ease 0.5s;
+
 
 }
 
 body {
     font-family: 'Inter';
-    background-color: #0e0e0e;
+    background-color: var(--mainColor);
     color: var(--textColor);
     line-height: 1.6;
+    background-image: url(https://i.pinimg.com/1200x/13/fc/39/13fc397ab4b0bdb473a8867165a379ca.jpg);
+    background-size: cover;
 }
 
     header {
-      background-color: #111;
+      background-color: #1111110b;
       padding: 2rem 1rem;
       text-align: center;
+      border: 1px rgba(227, 227, 227, 0.254) solid;
     }
 
     header img {
@@ -84,6 +89,13 @@ body {
       color: var(--textColorMain);
     }
 
+    b {
+      font-size: 1.2rem;
+      font-weight: 570;
+      margin-bottom: 1rem;
+      color: var(--specialColor);
+    }
+
     h3 {
       font-size: 1.4rem;
       font-weight: 570;
@@ -114,8 +126,6 @@ body {
       overflow-x: scroll;
       width: 100%;
       height: auto;
-      background-color: var(--secundaryColor);
-      border: var(--border);
     }
 
     .scroll img {
@@ -155,7 +165,7 @@ body {
       background-color: var(--secundaryColor);
     }
 
-    .projects-icons:hover {
+    .projects-icons a:hover {
       background-color: var(--secundaryColor);
       transform: scale(1.05);
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.391);
@@ -215,11 +225,27 @@ body {
 
 
     footer {
-      background-color: #111;
+      background-color: var(--mainColor);
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 1rem 1rem;
       font-size: 0.9rem;
-      color: #777;
+      color: #afafaf;
+      border: 1px rgba(227, 227, 227, 0.254) solid;
+    }
+
+    .flyer {
+        position: fixed;
+        bottom: 0;
+        right: 2px;
+        top: 2px;
+        justify-content: end;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .flyer a img{
+      width: 10rem;
+      height: 10rem;
     }
 
     @media (max-width: 600px) {
