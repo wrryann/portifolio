@@ -41,7 +41,7 @@ body {
     header img {
       border-radius: 2p;
       object-fit: cover;
-      border: 2px solid #a9a9a959;
+      border: 1px solid #fafafa81;
     }
 
     header h1 {
@@ -167,7 +167,7 @@ body {
 
     .projects-icons a:hover {
       background-color: var(--secundaryColor);
-      transform: scale(1.05);
+      transform: scale(2);
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.391);
       border: rgba(255, 255, 255, 0.175) 2px solid;
     }
@@ -235,17 +235,8 @@ body {
 
     .flyer {
         position: fixed;
-        bottom: 0;
-        right: 2px;
-        top: 2px;
         justify-content: end;
         align-items: center;
-        z-index: 10;
-    }
-
-    .flyer a img{
-      width: 10rem;
-      height: 10rem;
     }
 
     @media (max-width: 600px) {

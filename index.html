@@ -15,6 +15,33 @@
 
   <script src="/scripts/index.js" type="module"></script>
 
+  <div class="flyer" id="dark_mode" style="        
+    bottom: 0;
+    left: 10px;
+    top: 10px;
+    z-index: 10;
+    ">
+
+    <a href="pages/projects.html" class="transparent" class="projects-icons"  target="_blank">
+        <img src="imgs/night.png" style="height: 10%;" alt="">
+      </a>  
+
+      <p>^^ click me</p>
+  </div>
+
+  <div class="flyer" style="        
+    bottom: 0;
+    right: 2px;
+    top: 2px;
+    z-index: 10;
+    ">
+
+    <a href="pages/projects.html" class="transparent" class="projects-icons"  target="_blank">
+        <img src="imgs/contact_me.webp" style="height: 20%;" alt="">
+      </a>  
+  </div>
+
+
   <header>
     <img src="imgs/icon.webp" alt="Black Kray image" height="150px" />
     <h1>wrryann</h1>
@@ -31,22 +58,16 @@
 
   </section>
 
-  <div class="flyer" >
-    <a href="pages/projects.html" class="transparent" class="projects-icons"  target="_blank">
-        <img src="imgs/contact_me.webp" alt="">
-      </a>  
-  </div>
-
   <section>
     <div class="scroll" class="list">
       
       <a href="pages/projects.html" class="transparent" class="projects-icons" target="_blank">
         <img src="imgs/script.webp" alt="">
       </a>  
-      <a href="pages/buildings.html" class="transparent" target="_blank">
+      <a href="pages/buildings.html" class="transparent" class="projects-icons"  target="_blank">
         <img src="imgs/bulding.webp" alt="">
       </a>
-      <a href="pages/games.html" class="transparent" target="_blank">
+      <a href="pages/games.html" class="transparent" class="projects-icons"  target="_blank">
         <img src="imgs/gamesIMade.webp" alt="">
       </a>
     </div>
@@ -54,6 +75,9 @@
   </section>
 
   <section id="contact" class="list">
+    <a href="pages/games.html" class="transparent" class="projects-icons"  target="_blank">
+        <img src="imgs/gamesIMade.webp" alt="">
+      </a>
     <h2>Contact me!</h2>
     <p Want to work with me? Reach out!</p>
     <p>Email: <a href="mailto:wrryann@gmail.com">wrryann@gmail.com</a></p>
@@ -69,6 +93,20 @@
   <footer>
     made with so much hate by wrryann. this image is from pinterest btw  not mine
   </footer>
+
+  <div class="flyer" id="nyan_cat" style="        
+    bottom: 0;
+    right: 2px;
+    top: 2px;
+    z-index: 10;
+    pointer-events: none;
+    ">
+
+    <p></p>
+    <img src="imgs/cat.gif" style="height: 24px;" alt="">
+  </div>
+
+  <script src="scripts/effects.js"></script>
 
     <script>
     if (localStorage.getItem("seenFootage") === null) {
