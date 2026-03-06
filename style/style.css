@@ -10,7 +10,7 @@
     --textColorMain: #f7f7f7;
     --textColor: #f1f1f1;
 
-    --specialColor: #45ee2b;
+    --specialColor: #350c0c;
     --backgroundImage: url(https://i.pinimg.com/1200x/13/fc/39/13fc397ab4b0bdb473a8867165a379ca.jpg);
 }
 
@@ -129,16 +129,8 @@ body {
     .scroll {
       display: flex;
       width: 100%;
-      height: auto;
-    }
-
-    .scroll img {
-      height: 9rem;
-      border-radius: 2rem;
-    }
-
-    .scroll img:hover {
-      
+      height: 70px;
+      flex-direction: row;
     }
 
     .button {
@@ -166,8 +158,15 @@ body {
     }
 
     .projects-icons {
-      display: inline-block;
+      display: flex;
+      height: 30%;
+      width: 30%;
+      min-height: 40px;
+      max-height: 50px;
       transition: transform 0.2s ease;
+    }
+
+    .projects-icons img {
     }
 
     .projects-icons:hover {
@@ -238,7 +237,6 @@ body {
 
     .flyer {
         position: fixed;
-        justify-content: end;
         align-items: center;
     }
 
