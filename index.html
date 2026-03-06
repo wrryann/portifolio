@@ -15,19 +15,20 @@
 
   <script src="/scripts/index.js" type="module"></script>
 
-  <div class="flyer" id="dark_mode" style="        
+  <button class="flyer" id="dark_mode" style="        
     bottom: 0;
     left: 10px;
     top: 10px;
     z-index: 10;
+    border: none;
+    background-color: transparent;
+    height: 7%;
     ">
 
-    <a href="pages/projects.html" class="transparent" class="projects-icons"  target="_blank">
-        <img src="imgs/night.png" style="height: 10%;" alt="">
+    <a class="transparent" class="projects-icons">
+        <img src="imgs/night.png" style="height: 100%;" alt="">
       </a>  
-
-      <p>^^ click me</p>
-  </div>
+  </button>
 
   <div class="flyer" style="        
     bottom: 0;
@@ -36,7 +37,7 @@
     z-index: 10;
     ">
 
-    <a href="pages/projects.html" class="transparent" class="projects-icons"  target="_blank">
+    <a href="#contact" class="transparent" class="projects-icons"  target="_self">
         <img src="imgs/contact_me.webp" style="height: 20%;" alt="">
       </a>  
   </div>
@@ -58,26 +59,29 @@
 
   </section>
 
-  <section>
-    <div class="scroll" class="list">
+  <div style="
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      ">
+    <div class="scroll">
       
-      <a href="pages/projects.html" class="transparent" class="projects-icons" target="_blank">
+      <a href="pages/projects.html" class="transparent projects-icons" target="_self">
         <img src="imgs/script.webp" alt="">
       </a>  
-      <a href="pages/buildings.html" class="transparent" class="projects-icons"  target="_blank">
+      <a href="pages/buildings.html" class="transparent projects-icons"  target="_self">
         <img src="imgs/bulding.webp" alt="">
       </a>
-      <a href="pages/games.html" class="transparent" class="projects-icons"  target="_blank">
+      <a href="pages/games.html" class="projects-icons"  target="_self">
         <img src="imgs/gamesIMade.webp" alt="">
       </a>
     </div>
         
-  </section>
+  </div>
 
   <section id="contact" class="list">
-    <a href="pages/games.html" class="transparent" class="projects-icons"  target="_blank">
-        <img src="imgs/gamesIMade.webp" alt="">
-      </a>
     <h2>Contact me!</h2>
     <p Want to work with me? Reach out!</p>
     <p>Email: <a href="mailto:wrryann@gmail.com">wrryann@gmail.com</a></p>

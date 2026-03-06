@@ -11,6 +11,7 @@
     --textColor: #f1f1f1;
 
     --specialColor: #45ee2b;
+    --backgroundImage: url(https://i.pinimg.com/1200x/13/fc/39/13fc397ab4b0bdb473a8867165a379ca.jpg);
 }
 
 * {
@@ -27,15 +28,14 @@ body {
     background-color: var(--mainColor);
     color: var(--textColor);
     line-height: 1.6;
-    background-image: url(https://i.pinimg.com/1200x/13/fc/39/13fc397ab4b0bdb473a8867165a379ca.jpg);
+    background-image: var(--backgroundImage);
     background-size: cover;
 }
 
     header {
-      background-color: #1111110b;
+      background-color: transparent;
       padding: 2rem 1rem;
       text-align: center;
-      border: 1px rgba(227, 227, 227, 0.254) solid;
     }
 
     header img {
@@ -69,9 +69,14 @@ body {
     section {
       padding: 3rem 1rem;
       max-width: 900px;
-      margin: 0 auto;
+      margin: 20px auto;
       display: flex;
-      align-items: center;
+      justify-content: start;
+      align-items: start;
+      background-color: var(--secundaryColor);
+      border: var(--border);
+      border-radius: 7px;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.095);
 
     }
 
@@ -123,7 +128,6 @@ body {
 
     .scroll {
       display: flex;
-      overflow-x: scroll;
       width: 100%;
       height: auto;
     }
@@ -162,14 +166,13 @@ body {
     }
 
     .projects-icons {
-      background-color: var(--secundaryColor);
+      display: inline-block;
+      transition: transform 0.2s ease;
     }
 
-    .projects-icons a:hover {
-      background-color: var(--secundaryColor);
-      transform: scale(2);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.391);
-      border: rgba(255, 255, 255, 0.175) 2px solid;
+    .projects-icons:hover {
+      transform: translateY(-20px);
+
     }
 
     .project {
