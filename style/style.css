@@ -19,8 +19,6 @@
     padding: 0;
     box-sizing: border-box;
     font-weight: 560;
-
-
 }
 
 body {
@@ -66,17 +64,25 @@ body {
       color: #aaa;
     }
 
+    main {
+      padding: 1rem 3vw;
+      display: flex;
+      align-items: start;
+      justify-content: center ;
+      flex-direction: column;
+    }
+
     section {
       padding: 3rem 1rem;
       max-width: 900px;
-      margin: 20px auto;
       display: flex;
-      justify-content: start;
+      justify-content: center;
       align-items: start;
       background-color: var(--secundaryColor);
       border: var(--border);
       border-radius: 7px;
       box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.095);
+      flex: 1;
 
     }
 
@@ -124,13 +130,13 @@ body {
         cursor: pointer;      /* shows pointer cursor when hovering */
     }
 
-
-
     .scroll {
       display: flex;
       width: 100%;
-      height: 70px;
+      height: 100%;
       flex-direction: row;
+      justify-content: start;
+      align-items: start;
     }
 
     .button {
@@ -149,24 +155,17 @@ body {
         border: var(--borderHover) ;
     }
 
-    #project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 16px;
-      padding: 16px;
-
-    }
-
     .projects-icons {
       display: flex;
-      height: 30%;
-      width: 30%;
-      min-height: 40px;
-      max-height: 50px;
+      height: 100%;
+      width: auto;
+      min-width: 10px;
       transition: transform 0.2s ease;
     }
 
     .projects-icons img {
+      width: 100%;
+      object-fit: contain;
     }
 
     .projects-icons:hover {
