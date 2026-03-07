@@ -18,7 +18,7 @@ let top_true = false
 let right_true = false
 
 function loop_nyan() {
-    if (topo >= 97) {
+    if (topo >= 92) {
         top_true = false
     } else if (topo <= 0) {
         top_true = true
@@ -68,23 +68,27 @@ document.addEventListener("visibilitychange", () => {
 let dark_mode_button = document.querySelector('#dark_mode');
 
 function set_dark(mode) {
-    if (mode == "true") {
+    if (mode == "true") { // day
         localStorage.setItem("darkmode", "false")
         dark_mode_button.children[0].children[0].src = "imgs/night.png"
 
         document.documentElement.style.setProperty("--mainColor", "#0e0e0e3a")
         document.documentElement.style.setProperty("--secundaryColor", "#15151568")
         document.documentElement.style.setProperty("--backgroundImage", "url(https://i.pinimg.com/1200x/13/fc/39/13fc397ab4b0bdb473a8867165a379ca.jpg)")
-        document.documentElement.style.setProperty("----specialColor", "#e2e1deff")
+        document.documentElement.style.setProperty("--specialColor", "#29ff0dff")
+        document.documentElement.style.setProperty("--textColorMain", "#f7f7f7")
+        document.documentElement.style.setProperty("--textColor", "#f1f1f1")
     } 
-    else if (mode == "false") {
+    else if (mode == "false") { // night
         localStorage.setItem("darkmode", "true")
         dark_mode_button.children[0].children[0].src = "imgs/day.jpg"
 
         document.documentElement.style.setProperty("--mainColor", "#a1a1a158")
         document.documentElement.style.setProperty("--secundaryColor", "#cdcdcd2c")
-        document.documentElement.style.setProperty("--backgroundImage", "url(https://i.pinimg.com/736x/ae/9f/17/ae9f175555abf7ca4db3202e87fe62a9.jpg")
-        document.documentElement.style.setProperty("----specialColor", "#350c0c")
+        document.documentElement.style.setProperty("--backgroundImage", "url(https://i.pinimg.com/1200x/dd/ff/f8/ddfff8f1a61a694107ba8813fc778b8a.jpg)")
+        document.documentElement.style.setProperty("--specialColor", "#ff0000ff")
+        document.documentElement.style.setProperty("--textColorMain", "#f8f8f8ff")
+        document.documentElement.style.setProperty("--textColor", "#e9e9e9ff")
         
     }
 }
@@ -93,9 +97,18 @@ dark_mode_button.addEventListener('click', () => {
     set_dark(localStorage.getItem("darkmode"))
 })
 
+let explosion_sfx = new Audio("audio/explosion.mp3")
+
 function click_effect(x, y) {
     let element = document.createElement('div');
     document.body.appendChild(element);
+
+    if (!explosion_sfx.paused) {
+        explosion_sfx.pause()
+        explosion_sfx.currentTime = 0
+    }
+
+    explosion_sfx.play()
 
     setTimeout(() => {
         element.remove();
@@ -116,11 +129,28 @@ function click_effect(x, y) {
     `
 }
 
-let explosion_sfx = new Audio("audio/explosion.mp3")
+let tool_tip = document.querySelector('#tool_tip');
+let tool_tip_text = tool_tip.children[0]
+
+function tool_tip_eff(x, y) {
+    let element = document.elementFromPoint(x, y)
+    
+    if (element.dataset.tool_tip) {
+        tool_tip.style.left = x + 15 + "px"
+        tool_tip.style.top = y + 10 + "px"
+        tool_tip.style.visibility = "visible"
+        tool_tip_text.textContent = element.dataset.tool_tip
+    } else {
+        tool_tip.style.visibility = "hidden"
+    }
+}
 
 document.addEventListener('click', (e) => {
     click_effect(e.clientX, e.clientY)
-    explosion_sfx.play()
+})
+
+document.addEventListener("mousemove", (e) => {
+    tool_tip_eff(e.clientX, e.clientY)
 })
 
 if (localStorage.getItem("darkmode") == "true") {

@@ -15,6 +15,11 @@
 
   <script src="/scripts/index.js" type="module"></script>
 
+  <div class="flyer" id="tool_tip">
+    <p></p>
+  </div>
+  
+
   <button class="flyer" id="dark_mode" style="        
     left: 10px;
     top: 10px;
@@ -36,20 +41,41 @@
     ">
 
     <a href="#contact" class="transparent"  target="_self">
-        <img src="imgs/contact_me.webp" style="height: 100px;" alt="">
+        <img src="imgs/contact_me.webp" style="height: 100px;">
       </a>  
   </div>
 
 
   <header>
-    <img src="imgs/icon.webp" alt="Black Kray image" height="150px" />
+    <img src="imgs/icon.webp" data-tool_tip="that is black kray, not me" height="150px" />
     <h1>wrryann</h1>
-    <p>>><b>Scripter</b> and <b>Builder</b><<</p>
+    <p><b>Scripter</b> and <b>Builder</b></p>
   </header>
 
   <main>
     <section class="list" id="about">
-      <h2>About Me</h2>
+      <h2><img src="https://www.freepnglogos.com/uploads/pin-png/gps-location-map-pin-icon-2.png" data-tool_tip="key" class="emoji"> key things</h2>
+      <div>
+        <h3>
+          <img src="https://media.tenor.com/4HoYx_XeVBQAAAAi/split-personality.gif" class="emoji"> i'm 16 years old
+        </p>
+        <p>
+          <img src="https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/0/6/2/8/062820492998c76f8c780ce67c30779ffd264c8f.png" class="emoji"> 8 years on roblox
+        </p>
+        <p>
+          <img src="https://icons.iconseeker.com/png/fullsize/glossy-iconset-mac/program-folder.png" class="emoji"> 3 years of experience on programming in general
+        </p>
+        <p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/ROBLOX_Studio_icon.png" class="emoji"> 1 year of experience on roblox studio (i use it since 2019 but i just locked in last year)
+        </p>
+        <p>
+          <img src="https://media.tenor.com/2t6VXjtjW0sAAAAm/chop.webp" class="emoji"> Brazil (GMT-3)
+        </p>
+      </div>
+
+      <hr>
+
+      <h2><img src="imgs/hi-cat.gif" data-tool_tip="hii" class="emoji"> About Me</h2>
       <div>
         <p>
           Hey — I'm wrryan. I script systems for all kinds of experiences and build cool stuff on Roblox.
@@ -60,37 +86,52 @@
 
     <div style="
         padding: 2vw 1rem;
-        max-width: 450px;
+        max-width: 550px;
         display: flex;
-        height: 170px;
+        height: 240px;
         align-items: start;
         justify-content: start;
+        flex-direction: column;
         ">
+      <h2 style="margin: 0;"><img src="https://media.tenor.com/59EuynW0y_EAAAAi/clapping-kanye-west.gif" data-tool_tip="kanye approves" class="emoji"> my projects</h2>
+
       <div class="scroll">
-        
         <a href="pages/scripting.html" class="transparent projects-icons" target="_self">
-          <img src="imgs/script.webp" alt="">
+          <img data-tool_tip="things i scripted" src="imgs/script.webp">
         </a>  
         <a href="pages/buildings.html" class="transparent projects-icons"  target="_self">
-          <img src="imgs/bulding.webp" alt="">
+          <img data-tool_tip="my buildings i made in roblox" src="imgs/bulding.webp">
         </a>
         <a href="pages/games.html" class="projects-icons"  target="_self">
-          <img src="imgs/gamesIMade.webp" alt="">
+          <img data-tool_tip="my roblox games C:" src="imgs/gamesIMade.webp" alt="">
         </a>
       </div>
           
     </div>
 
+    <section class="list" >
+      
+
+      <hr>
+
+      <h2><img src="imgs/hi-cat.gif" data-tool_tip="hii" class="emoji"> About Me</h2>
+      <div>
+        <p>
+          Hey — I'm wrryan. I script systems for all kinds of experiences and build cool stuff on Roblox.
+        </p>
+      </div>
+
+    </section>
+
     <section id="contact" class="list">
       <h2>Contact me!</h2>
       <p Want to work with me? Reach out!</p>
-      <p>Email: <a href="mailto:wrryann@gmail.com">wrryann@gmail.com</a></p>
+      <p>Email: <a href="mailto:wrryann@gmail.com" target="_blank" >wrryann@gmail.com</a></p>
       <div>
         <a href="" class="button" target="_blank">discord</a>
         <a href="https://www.roblox.com/users/877420885/profile" class="button" target="_blank">Roblox</a>
         <a href="https://github.com/wrryann" class="button" target="_blank">GITHUBBBB</a>
       </div>
-
 
     </section>
   </main>
