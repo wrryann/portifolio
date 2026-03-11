@@ -117,12 +117,18 @@ body {
 
     a {
       color: var(--specialColor);
+
     }
 
     hr {
       width: 100%;
       margin: 1.5em 0;
       border: var(--border);
+    }
+
+    #img-scroll {
+      width: 100%;
+      border-radius: 7px;
     }
 
     .emoji {
@@ -159,17 +165,27 @@ body {
     .button {
         border: var(--border);
         display: inline-block;
-        padding: 0.3rem 0.8rem;
+        padding: 0.3rem 0.5rem;
         background-color: var(--secundaryColor);
         color: #fff;
-        border-radius: 10px;
+        border-radius: 5px;
         text-decoration: none;
         margin-top: 1rem;
         transition: 0.2s;
+        cursor: pointer;
     }
 
     .button:hover {
+        transform: rotate(10deg);
         border: var(--borderHover) ;
+    }
+
+    #project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      padding: 16px;
+
     }
 
     .projects-icons {

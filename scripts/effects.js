@@ -159,6 +159,31 @@ if (localStorage.getItem("darkmode") == "true") {
     set_dark("true")
 }
 
+let img = document.querySelector('#img-scroll');
+
+let ImageScrollPreset = [
+    {
+        url: "",
+        title: "",
+        description: ""
+    },
+    {
+        url: "",
+        title: "",
+        description: ""
+    },
+    {
+        url: "",
+        title: "",
+        description: ""
+    }
+];
+
+function ChangeImage(index) {
+    img.url = "a"
+}
+
+ChangeImage
 
 loop_nyan()
 
