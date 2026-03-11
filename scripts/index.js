@@ -21,10 +21,6 @@ const type = {
   other: 'Other',
 }
 
-window.addEventListener("load", () => {
-  console.log("Usuário entrou no site")
-})
-
 function getYouTubeThumbnail(videoUrl) {
   const videoId = videoUrl.split("v=")[1]?.split("&")[0]; // extract the ID from the URL
   if (!videoId) return null;

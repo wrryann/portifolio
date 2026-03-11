@@ -12,52 +12,56 @@ let phrases = [
 
 let nyan_cat = document.querySelector('#nyan_cat');
 
-let right = Math.random() * (99 - 2) + 2
-let topo = Math.random() * (99 - 2) + 2
-let top_true = false
-let right_true = false
+if (nyan_cat) {
+    let right = Math.random() * (99 - 2) + 2
+    let topo = Math.random() * (99 - 2) + 2
+    let top_true = false
+    let right_true = false
 
-function loop_nyan() {
-    if (topo >= 92) {
-        top_true = false
-    } else if (topo <= 0) {
-        top_true = true
+    function loop_nyan() {
+        if (topo >= 92) {
+            top_true = false
+        } else if (topo <= 0) {
+            top_true = true
+        }
+
+        if (right >= 97) {
+            right_true = false
+            nyan_cat.style.transform = "scaleX(1)"
+        } else if (right <= 0) {
+            right_true = true
+            nyan_cat.style.transform = "scaleX(-1)"
+        }
+
+        if (right_true) {
+            right += 0.19 
+        } else {
+            right -= 0.21
+        }
+
+        if (top_true) {
+            topo += 0.25
+        } else {
+            topo -= 0.28
+        }
+
+        nyan_cat.style.right = right + "vw"
+        nyan_cat.style.top = topo + "vh"
+
+        requestAnimationFrame(loop_nyan)
     }
 
-    if (right >= 97) {
-        right_true = false
-        nyan_cat.style.transform = "scaleX(1)"
-    } else if (right <= 0) {
-        right_true = true
-        nyan_cat.style.transform = "scaleX(-1)"
-    }
+    setInterval(() => {
+    nyan_cat.querySelector("p").textContent = phrases[Math.floor(Math.random() * phrases.length)]
+    }, 10000)
 
-    if (right_true) {
-        right += 0.19 
-    } else {
-        right -= 0.21
-    }
-
-    if (top_true) {
-        topo += 0.25
-    } else {
-        topo -= 0.28
-    }
-
-    nyan_cat.style.right = right + "vw"
-    nyan_cat.style.top = topo + "vh"
-
-    requestAnimationFrame(loop_nyan)
+    loop_nyan()
 }
-
-setInterval(() => {
-  nyan_cat.querySelector("p").textContent = phrases[Math.floor(Math.random() * phrases.length)]
-}, 10000)
 
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     document.title = " 🐱 hey, come back >:("
-    let meow = new Audio("audio/meow.mp3")
+    let meow = new Audio("/audio/meow.mp3")
 
     meow.play()
   } else {
@@ -70,7 +74,9 @@ let dark_mode_button = document.querySelector('#dark_mode');
 function set_dark(mode) {
     if (mode == "true") { // day
         localStorage.setItem("darkmode", "false")
-        dark_mode_button.children[0].children[0].src = "imgs/night.png"
+        if (dark_mode_button) {
+            dark_mode_button.children[0].children[0].src = "imgs/night.png"
+        }
 
         document.documentElement.style.setProperty("--mainColor", "#0e0e0e3a")
         document.documentElement.style.setProperty("--secundaryColor", "#15151568")
@@ -81,7 +87,9 @@ function set_dark(mode) {
     } 
     else if (mode == "false") { // night
         localStorage.setItem("darkmode", "true")
-        dark_mode_button.children[0].children[0].src = "imgs/day.jpg"
+        if (dark_mode_button) {
+            dark_mode_button.children[0].children[0].src = "imgs/day.jpg"
+        }
 
         document.documentElement.style.setProperty("--mainColor", "#a1a1a158")
         document.documentElement.style.setProperty("--secundaryColor", "#cdcdcd2c")
@@ -93,11 +101,14 @@ function set_dark(mode) {
     }
 }
 
-dark_mode_button.addEventListener('click', () => {
-    set_dark(localStorage.getItem("darkmode"))
-})
 
-let explosion_sfx = new Audio("audio/explosion.mp3")
+if (dark_mode_button) {
+    dark_mode_button.addEventListener('click', () => {
+        set_dark(localStorage.getItem("darkmode"))
+    })
+}
+
+let explosion_sfx = new Audio("/audio/explosion.mp3")
 
 function click_effect(x, y) {
     let element = document.createElement('div');
@@ -129,8 +140,15 @@ function click_effect(x, y) {
     `
 }
 
-let tool_tip = document.querySelector('#tool_tip');
+let tool_tip = document.createElement("div");
+
+tool_tip.id = "tool_tip";
+tool_tip.className = "flyer";
+tool_tip.innerHTML = "<p></p>"
+
 let tool_tip_text = tool_tip.children[0]
+
+document.body.appendChild(tool_tip);
 
 function tool_tip_eff(x, y) {
     let element = document.elementFromPoint(x, y)
@@ -159,31 +177,57 @@ if (localStorage.getItem("darkmode") == "true") {
     set_dark("true")
 }
 
-let img = document.querySelector('#img-scroll');
+let carouselExampleDark = document.querySelector('#carouselExampleDark');
 
-let ImageScrollPreset = [
-    {
-        url: "",
-        title: "",
-        description: ""
-    },
-    {
-        url: "",
-        title: "",
-        description: ""
-    },
-    {
-        url: "",
-        title: "",
-        description: ""
+if (carouselExampleDark) {
+    let ImageScrollPreset = [
+        {
+            url: "https://i.redd.it/wdx5zgrrbz6a1.png",
+            title: "1",
+            description: "asdasdasasdasdasdd"
+        },
+        {
+            url: "https://i.ytimg.com/vi/wtdMskV0OiE/maxresdefault.jpg",
+            title: "2",
+            description: "asdasd"
+        },
+        {
+            url: "https://i.ytimg.com/vi/7LbrqPM7T-o/maxresdefault.jpg",
+            title: "3",
+            description: "adad"
+        }
+    ];
+
+    let ImgIndex = 0;
+
+    function ChangeImage(index) {
+
+        if (index < 0) {
+            index = ImageScrollPreset.length - 1;
+        } 
+        else if (index >= ImageScrollPreset.length) { 
+            index = 0;
+        }
+
+        ImgIndex = index;
+
+        carouselExampleDark.children[0].src = ImageScrollPreset[index].url;
+        carouselExampleDark.children[1].textContent = ImageScrollPreset[index].title;
+        carouselExampleDark.children[2].textContent = ImageScrollPreset[index].description;
+
     }
-];
 
-function ChangeImage(index) {
-    img.url = "a"
+    // here the code loads the first image
+    ChangeImage(0);
+
+    // here the code goes to the previous image
+    carouselExampleDark.children[3].addEventListener("click", () => {
+        ChangeImage(ImgIndex - 1);
+    });
+
+    // here the code goes to the next image
+    carouselExampleDark.children[4].addEventListener("click", () => {
+        ChangeImage(ImgIndex + 1);
+    });
 }
-
-ChangeImage
-
-loop_nyan()
 
