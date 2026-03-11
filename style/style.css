@@ -11,7 +11,7 @@
     --textColor: #f1f1f1;
 
     --specialColor: #350c0c;
-    --backgroundImage: url(https://i.pinimg.com/1200x/13/fc/39/13fc397ab4b0bdb473a8867165a379ca.jpg);
+    --backgroundImage: url(https://i.pinimg.com/736x/7f/55/8a/7f558a987c8a057bc2ea87bd3c7a94d4.jpg);
 }
 
 * {
@@ -37,15 +37,26 @@ body {
       text-align: center;
     }
 
-    header img {
-      border-radius: 2p;
-      object-fit: cover;
-      border: 1px solid #fafafa81;
-    }
-
     header h1 {
       margin-top: 1rem;
       font-size: 2rem;
+    }
+
+    .badges {
+      height: 2.5em;
+      vertical-align: middle;
+      background-color: var(--secundaryColor);
+      padding: 0.4em;
+      border: var(--border);
+
+    }
+
+    .badges:hover {
+      height: 2.5em;
+      vertical-align: middle;
+      background-color: var(--secundaryColor);
+      padding: 0.4em;
+      transform: scale(1.2);
     }
 
     nav {

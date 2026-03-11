@@ -80,7 +80,7 @@ function set_dark(mode) {
 
         document.documentElement.style.setProperty("--mainColor", "#0e0e0e3a")
         document.documentElement.style.setProperty("--secundaryColor", "#15151568")
-        document.documentElement.style.setProperty("--backgroundImage", "url(https://i.pinimg.com/1200x/13/fc/39/13fc397ab4b0bdb473a8867165a379ca.jpg)")
+        document.documentElement.style.setProperty("--backgroundImage", "url(https://i.pinimg.com/736x/7f/55/8a/7f558a987c8a057bc2ea87bd3c7a94d4.jpg)")
         document.documentElement.style.setProperty("--specialColor", "#29ff0dff")
         document.documentElement.style.setProperty("--textColorMain", "#f7f7f7")
         document.documentElement.style.setProperty("--textColor", "#f1f1f1")
