@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --mainColor: #0e0e0e3a;
+    --mainColor: #0e0e0e39;
     --secundaryColor: #15151568;
 
-    --border: #f1f1f15a 1px solid;
+    --border: #f1f1f15c 1px solid;
     --borderHover: #ececec98 1px solid;
 
     --textColorMain: #f7f7f7;
@@ -43,29 +43,34 @@ body {
     }
 
     header p {
-      background-color: var(--mainColor);
+      box-shadow: inset -10px -5px 15px rgba(255, 255, 255, 0.768),
+        15px 15px 20px rgba(0, 0, 0, 0.24);
+      background: var(--secundaryColor);
       margin-top: 1em; 
       min-width: 5em;
       max-width: 22em;
       justify-self: center;
       padding: 0 0.6em;
       border: var(--border);
+      border-radius: 7px;
+      backdrop-filter: blur(10px) saturate(200%);
+
     }
 
     .badges {
+      box-shadow: inset -4px -2px 7px rgba(255, 255, 255, 0.768),
+        15px 15px 20px rgba(0, 0, 0, 0.24);
+      backdrop-filter: blur(10px) saturate(200%);
       height: 2.5em;
       vertical-align: middle;
-      background-color: var(--secundaryColor);
+      background: var(--secundaryColor);
       padding: 0.4em;
       border: var(--border);
-
+      border-radius: 5px;
+      margin: 0.1em;
     }
 
     .badges:hover {
-      height: 2.5em;
-      vertical-align: middle;
-      background-color: var(--secundaryColor);
-      padding: 0.4em;
       transform: scale(1.2);
     }
 
@@ -100,13 +105,20 @@ body {
       display: flex;
       justify-content: center;
       align-items: start;
-      background-color: var(--secundaryColor);
+      background: var(--mainColor);
       border: var(--border);
+      backdrop-filter: blur(5px);
       border-radius: 7px;
-      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.095);
+      box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.975),
+        15px 15px 20px rgba(0, 0, 0, 0.24);
       flex: 1;
+      backdrop-filter: blur(5px) saturate(150%);
 
     }
+
+    p {
+      text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.567);
+    } 
 
     h1 {
       font-size: 2rem;
@@ -120,6 +132,7 @@ body {
       font-weight: 650;
       margin-bottom: 1rem;
       color: var(--textColorMain);
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.209);
     }
 
     b {
@@ -187,7 +200,7 @@ body {
         border: var(--border);
         display: inline-block;
         padding: 0.3rem 0.5rem;
-        background-color: var(--secundaryColor);
+        background: var(--secundaryColor);
         color: #fff;
         border-radius: 5px;
         text-decoration: none;
@@ -238,11 +251,12 @@ body {
     }
 
     .project {
-      background-color: var(--secundaryColor);
+      background: var(--mainColor);
       padding: 1rem;
       border: var(--border);
       border-radius: 10px;
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0.391);
+      box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.768),
+        15px 15px 20px rgba(0, 0, 0, 0.24);
       cursor: pointer;
       transition: 0.1s ease;
     }
@@ -259,6 +273,8 @@ body {
     }
 
     .project img {
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.768),
+        15px 15px 20px rgba(0, 0, 0, 0.24);
       object-fit: cover; 
       width: 100%;
       aspect-ratio: 16 / 9; /* defines the container height */
@@ -268,8 +284,8 @@ body {
     }
 
     .project:hover {
-      background-color: var(--secundaryColor);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.391);
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.768),
+        15px 15px 20px rgba(0, 0, 0, 0.24);
       border: var(--borderHover);
     }
 
@@ -302,7 +318,7 @@ body {
 
 
     footer {
-      background-color: var(--mainColor);
+      background: var(--mainColor);
       text-align: center;
       padding: 1rem 1rem;
       font-size: 0.9rem;
@@ -314,12 +330,17 @@ body {
         position: fixed;
         align-items: center;
     }
-
+    
     #tool_tip {
       pointer-events: none;
-      background-color: red;
+      box-shadow: inset 0 0 9px rgb(255, 255, 255),
+        5px 5px 10px rgba(0, 0, 0, 0.413);
+      background-color: rgba(255, 0, 0, 0.616);
+      border-radius: 15px;
+      backdrop-filter: blur(5px) saturate(250%);
+      border: var(--border);
       visibility: hidden;
-      padding: 0.3em;
+      padding: 0.5em;
       z-index: 10;
       max-width: 200px;
 

@@ -19,7 +19,7 @@ if (nyan_cat) {
     let right_true = false
 
     function loop_nyan() {
-        if (topo >= 92) {
+        if (topo >= 97) {
             top_true = false
         } else if (topo <= 0) {
             top_true = true
@@ -78,20 +78,20 @@ function set_dark(mode) {
             dark_mode_button.children[0].children[0].src = "imgs/night.png"
         }
 
-        document.documentElement.style.setProperty("--mainColor", "#0e0e0e3a")
-        document.documentElement.style.setProperty("--secundaryColor", "#15151568")
-        document.documentElement.style.setProperty("--backgroundImage", "url(https://i.pinimg.com/736x/7f/55/8a/7f558a987c8a057bc2ea87bd3c7a94d4.jpg)")
+        document.documentElement.style.setProperty("--mainColor", "#c9c9c91a")
+        document.documentElement.style.setProperty("--secundaryColor", "linear-gradient(339deg,rgba(36, 36, 36, 0.16) 0%, rgba(248, 248, 248, 0.31) 100%)")
+        document.documentElement.style.setProperty("--backgroundImage", "url(https://i.pinimg.com/736x/7f/55/8a/7f558a987c8a057bc2ea87bd3c7a94d4.jpg)")        
         document.documentElement.style.setProperty("--specialColor", "rgb(255, 238, 0)")
         document.documentElement.style.setProperty("--textColorMain", "#ffffff")
         document.documentElement.style.setProperty("--textColor", "#f0f0f0")
-    } 
+    }
     else if (mode == "false") { // night
         localStorage.setItem("darkmode", "true")
         if (dark_mode_button) {
             dark_mode_button.children[0].children[0].src = "imgs/day.jpg"
         }
 
-        document.documentElement.style.setProperty("--mainColor", "#a1a1a158")
+        document.documentElement.style.setProperty("--mainColor", "linear-gradient(339deg,rgba(24, 24, 24, 0.43) 20%, rgba(140, 140, 140, 0.47) 100%)")
         document.documentElement.style.setProperty("--secundaryColor", "#cdcdcd2c")
         document.documentElement.style.setProperty("--backgroundImage", "url(https://i.pinimg.com/1200x/dd/ff/f8/ddfff8f1a61a694107ba8813fc778b8a.jpg)")
         document.documentElement.style.setProperty("--specialColor", "#ff0000ff")
