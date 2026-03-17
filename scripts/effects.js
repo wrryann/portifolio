@@ -7,7 +7,8 @@ let phrases = [
     "death grips",
     "my favorite song is hydr6c0don$",
     "i'm from brazil 🇧🇷🇧🇷🇧🇷",
-    "104.244.72.115, does these numbers sound familiar to you?"
+    "104.244.72.115, does these numbers sound familiar to you?",
+    "666"
 ]
 
 let nyan_cat = document.querySelector('#nyan_cat');

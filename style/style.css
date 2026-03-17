@@ -42,9 +42,13 @@ body {
       font-size: 2rem;
     }
 
+    p {
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.467);
+    } 
+
     header p {
       box-shadow: inset -10px -5px 15px rgba(255, 255, 255, 0.768),
-        15px 15px 20px rgba(0, 0, 0, 0.24);
+        5px 10px 20px rgba(0, 0, 0, 0.24);
       background: var(--secundaryColor);
       margin-top: 1em; 
       min-width: 5em;
@@ -52,21 +56,22 @@ body {
       justify-self: center;
       padding: 0 0.6em;
       border: var(--border);
-      border-radius: 7px;
+      border-radius: 100px;
       backdrop-filter: blur(10px) saturate(200%);
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.767);
 
     }
 
     .badges {
       box-shadow: inset -4px -2px 7px rgba(255, 255, 255, 0.768),
-        15px 15px 20px rgba(0, 0, 0, 0.24);
+        5px 10px 20px rgba(0, 0, 0, 0.24);
       backdrop-filter: blur(10px) saturate(200%);
       height: 2.5em;
       vertical-align: middle;
       background: var(--secundaryColor);
       padding: 0.4em;
       border: var(--border);
-      border-radius: 5px;
+      border-radius: 100%;
       margin: 0.1em;
     }
 
@@ -105,20 +110,15 @@ body {
       display: flex;
       justify-content: center;
       align-items: start;
-      background: var(--mainColor);
+      background: var(--secundaryColor);
       border: var(--border);
-      backdrop-filter: blur(5px);
-      border-radius: 7px;
+      border-radius: 10px;
       box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.975),
         15px 15px 20px rgba(0, 0, 0, 0.24);
       flex: 1;
-      backdrop-filter: blur(5px) saturate(150%);
+      backdrop-filter: blur(2px) saturate(180%);
 
     }
-
-    p {
-      text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.567);
-    } 
 
     h1 {
       font-size: 2rem;
@@ -160,7 +160,7 @@ body {
       border: var(--border);
     }
 
-    #img-scroll {
+    #img-scroll { 
       width: 100%;
       border-radius: 7px;
     }
@@ -202,11 +202,15 @@ body {
         padding: 0.3rem 0.5rem;
         background: var(--secundaryColor);
         color: #fff;
-        border-radius: 5px;
+        border-radius: 100px;
         text-decoration: none;
         margin-top: 1rem;
         transition: 0.2s;
         cursor: pointer;
+        box-shadow: inset -4px -2px 7px rgba(255, 255, 255, 0.768),
+          5px 10px 20px rgba(0, 0, 0, 0.24);
+        backdrop-filter: blur(10px) saturate(200%);
+
     }
 
     .button:hover {
@@ -293,13 +297,15 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #ff0000;
-        color: #fff;
         width: fit-content;
-        height: 1.6rem;
+        height: 1.8rem;
         border-radius: 100rem;
-        padding: 0.5rem;
-        
+        padding: 0.7rem;
+        box-shadow: inset 0 0 7px rgb(255, 255, 255, 0.800),
+            5px 5px 10px rgba(0, 0, 0, 0.413);
+        border-radius: 15px;
+        backdrop-filter: blur(5px) saturate(250%);
+        border: var(--border);        
       }
 
       .programming-language svg {
@@ -313,6 +319,7 @@ body {
       }
 
       .project h3 {
+        margin-top: 0.5em;
         margin-bottom: 0.5rem;
       }
 

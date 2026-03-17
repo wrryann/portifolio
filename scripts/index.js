@@ -1,12 +1,15 @@
 export const languages = {
   rust: {
-    color: 'rgba(237, 79, 26, 1)',
+    name: "Rust",
+    color: 'rgba(237, 79, 26, 0.6)',
   },
   luau: {
-    color: 'rgba(50, 81, 149, 1)',
+    name: "Luau",
+    color: 'rgba(50, 81, 149, 0.6)',
   },
   html: {
-    color: 'rgba(217, 137, 9, 1)',
+    name: "html",
+    color: 'rgba(217, 137, 9, 0.6)',
   }
 }
 
@@ -41,12 +44,14 @@ BuildHTML() {
     element.setAttribute("data-tool_tip", this.title + " | " + this.description);
     
     element.innerHTML = `
-      <img src="${this.thumbnail}">
+      <div class="image_div">
+        <img src="${this.thumbnail}">
+      </div>
 
       <div class="programming-language" style="background-color: ${this.language.color};"> 
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
-          <p>${this.language}</p>
+          <p>${this.language.name}</p>
         </svg>
       </div>
 
