@@ -16,7 +16,7 @@
     <a href="/index.html#pagesItems" style="margin-bottom: 1.5em;" class="button">< go back</a>
 
     <article id="projects" class="list">
-      <h2>Projects</h2>
+      <h2 >Scripting projects :)</h2>
       <div id="project-grid">
 
       </div>
@@ -26,11 +26,11 @@
   <script src="/scripts/effects.js"></script>
 
   <script type="module">
-    import { BuildProject, languages } from '../scripts/index.js';
+    import { BuildProject, languages, getYouTubeThumbnail} from '../scripts/index.js';
 
-    BuildProject("nigga a it", "really", "https://www.youtube.com/watch?v=C1f8_-8GU7I", languages.html);
-    BuildProject("Stamina Bar", "The stamina bar i made for a game C:", "https://www.youtube.com/watch?v=rWFXEBQ7g_E", languages.luau);
-    BuildProject("hey ayo", "noaaaaaaaasfa dgsdgdsfgd sd gd gdfgdf gdfg d dfghf fghfggd  ddddf dfg df dd", "https://www.youtube.com/watch?v=7G6UD04WL70", languages.luau);
+    BuildProject("This website", "i have this portifolio on my github if you want to check (click)", "https://www.youtube.com/watch?v=C1f8_-8GU7I", "https://prnt.sc/nZeG7ccgJuQA", languages.html);
+    BuildProject("Stamina Bar", "The stamina bar i made for a game C:", "https://www.youtube.com/watch?v=rWFXEBQ7g_E", getYouTubeThumbnail("https://www.youtube.com/watch?v=C1f8_-8GU7I"), languages.luau);
+    BuildProject("Rng animation", "From my lucky block games", "https://www.youtube.com/watch?v=-9noOmPjoWw", getYouTubeThumbnail("https://www.youtube.com/watch?v=-9noOmPjoWw"), languages.luau);
   </script>
 </body>
 </html>

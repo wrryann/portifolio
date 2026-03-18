@@ -81,10 +81,10 @@ function set_dark(mode) {
 
         document.documentElement.style.setProperty("--mainColor", "#c9c9c91a")
         document.documentElement.style.setProperty("--secundaryColor", "linear-gradient(339deg,rgba(36, 36, 36, 0.16) 0%, rgba(248, 248, 248, 0.31) 100%)")
-        document.documentElement.style.setProperty("--backgroundImage", "url(https://i.pinimg.com/736x/7f/55/8a/7f558a987c8a057bc2ea87bd3c7a94d4.jpg)")        
+        document.documentElement.style.setProperty("--backgroundImage", "linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.1)), url(https://i.pinimg.com/736x/7f/55/8a/7f558a987c8a057bc2ea87bd3c7a94d4.jpg)")        
         document.documentElement.style.setProperty("--specialColor", "rgb(255, 238, 0)")
         document.documentElement.style.setProperty("--textColorMain", "#ffffff")
-        document.documentElement.style.setProperty("--textColor", "#f0f0f0")
+        document.documentElement.style.setProperty("--textColor", "#ffffff")
     }
     else if (mode == "false") { // night
         localStorage.setItem("darkmode", "true")
@@ -92,8 +92,8 @@ function set_dark(mode) {
             dark_mode_button.children[0].children[0].src = "imgs/day.jpg"
         }
 
-        document.documentElement.style.setProperty("--mainColor", "linear-gradient(339deg,rgba(24, 24, 24, 0.43) 20%, rgba(140, 140, 140, 0.47) 100%)")
-        document.documentElement.style.setProperty("--secundaryColor", "#cdcdcd2c")
+        document.documentElement.style.setProperty("--mainColor", "rgb(10, 10, 10, 0.3)")
+        document.documentElement.style.setProperty("--secundaryColor", "rgb(10, 10, 10, 0.3)")
         document.documentElement.style.setProperty("--backgroundImage", "url(https://i.pinimg.com/1200x/dd/ff/f8/ddfff8f1a61a694107ba8813fc778b8a.jpg)")
         document.documentElement.style.setProperty("--specialColor", "#ff0000ff")
         document.documentElement.style.setProperty("--textColorMain", "#f8f8f8ff")
@@ -183,19 +183,19 @@ let carouselExampleDark = document.querySelector('#carouselExampleDark');
 if (carouselExampleDark) {
     let ImageScrollPreset = [
         {
-            url: "https://i.redd.it/wdx5zgrrbz6a1.png",
-            title: "1",
-            description: "asdasdasasdasdasdd"
+            url: "https://tr.rbxcdn.com/180DAY-c8bbcda80275d8c00215dbea1942f756/768/432/Image/Webp/noFilter",
+            title: "1. Lucky block Fights",
+            description: "A game i made in about a month or so. You simply open lucky blocks and fight players with the gears u get! I made everything myself, Ui, thumbnail, systems, map. except for the gears <img class='emoji' src='https://media.tenor.com/IzRw2MV7KsgAAAAj/somewhere-wales.gif'> <img class='emoji' src='https://media.tenor.com/dA2e6xOc7sIAAAAi/idk.gif'> (they are from the catalog) and the running animation cuz i'm not an animator"
         },
         {
-            url: "https://i.ytimg.com/vi/wtdMskV0OiE/maxresdefault.jpg",
-            title: "2",
-            description: "asdasd"
+            url: "/imgs/ContentDDD.webp",
+            title: "2. nothig here yet :/",
+            description: "..."
         },
         {
-            url: "https://i.ytimg.com/vi/7LbrqPM7T-o/maxresdefault.jpg",
-            title: "3",
-            description: "adad"
+            url: "https://media.tenor.com/yhMZIW9G7BkAAAAi/peachcat-cat.gif",
+            title: "3. nothig here yet :/",
+            description: "..."
         }
     ];
 
@@ -213,8 +213,8 @@ if (carouselExampleDark) {
         ImgIndex = index;
 
         carouselExampleDark.children[0].src = ImageScrollPreset[index].url;
-        carouselExampleDark.children[1].textContent = ImageScrollPreset[index].title;
-        carouselExampleDark.children[2].textContent = ImageScrollPreset[index].description;
+        carouselExampleDark.children[1].innerHTML = ImageScrollPreset[index].title;
+        carouselExampleDark.children[2].innerHTML = ImageScrollPreset[index].description;
 
     }
 

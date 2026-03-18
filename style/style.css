@@ -1,17 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --mainColor: #0e0e0e39;
-    --secundaryColor: #15151568;
-
     --border: #f1f1f15c 1px solid;
     --borderHover: #ececec98 1px solid;
-
-    --textColorMain: #f7f7f7;
-    --textColor: #f1f1f1;
-
-    --specialColor: #350c0c;
-    --backgroundImage: url(https://i.pinimg.com/736x/7f/55/8a/7f558a987c8a057bc2ea87bd3c7a94d4.jpg);
 }
 
 * {
@@ -125,6 +116,7 @@ body {
       margin-bottom: 1rem;
       color: var(--textColorMain);
       font-weight: 750;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.209);
     }
 
     h2 {
@@ -132,7 +124,7 @@ body {
       font-weight: 650;
       margin-bottom: 1rem;
       color: var(--textColorMain);
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.209);
+      text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.309);
     }
 
     b {
@@ -140,18 +132,23 @@ body {
       font-weight: 570;
       margin-bottom: 1rem;
       color: var(--specialColor);
+      text-shadow: 0px 0px 10px var(--specialColor);
     }
 
     h3 {
       font-size: 1.2rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
+      font-weight: 550;
+      margin-bottom: 0.2rem;
       color: var(--textColor);
+      text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.309);
     }
 
     a {
       color: var(--specialColor);
-
+    }
+    
+    a:hover {
+      text-shadow: 0px 0px 10px currentColor;
     }
 
     hr {
@@ -183,7 +180,6 @@ body {
         background-color: transparent;
         border: none;
         outline: none;        /* removes blue border on click (for buttons) */
-        color: inherit;       /* keeps text color consistent */
         cursor: pointer;      /* shows pointer cursor when hovering */
     }
 
@@ -220,7 +216,7 @@ body {
 
     #project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 16px;
       padding: 16px;
       width: 100%;
@@ -258,11 +254,11 @@ body {
       background: var(--mainColor);
       padding: 1rem;
       border: var(--border);
-      border-radius: 10px;
+      border-radius: 20px;
       box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.768),
-        15px 15px 20px rgba(0, 0, 0, 0.24);
+        10px 10px 15px rgba(0, 0, 0, 0.34);
       cursor: pointer;
-      transition: 0.1s ease;
+      transition: 0.3s ease;
     }
 
     .project * {
@@ -284,12 +280,13 @@ body {
       aspect-ratio: 16 / 9; /* defines the container height */
       overflow: hidden;
       margin-bottom: 1rem;
-      border-radius: 10px;
+      border-radius: 15px;
     }
 
     .project:hover {
-      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.768),
-        15px 15px 20px rgba(0, 0, 0, 0.24);
+      transform: scale(1.005);
+      box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.768),
+        20px 20px 25px rgba(0, 0, 0, 0.24);
       border: var(--borderHover);
     }
 
@@ -329,8 +326,16 @@ body {
       text-align: center;
       padding: 1rem 1rem;
       font-size: 0.9rem;
-      color: #afafaf;
+      margin: 0.5em;
       border: 1px rgba(227, 227, 227, 0.254) solid;
+
+      box-shadow: inset -10px -5px 15px rgba(255, 255, 255, 0.768),
+        5px 10px 20px rgba(0, 0, 0, 0.24);
+      background: var(--secundaryColor);
+      border: var(--border);
+      border-radius: 100px;
+      backdrop-filter: blur(2px) saturate(200%);
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.767);
     }
 
     .flyer {
@@ -342,7 +347,7 @@ body {
       pointer-events: none;
       box-shadow: inset 0 0 9px rgb(255, 255, 255),
         5px 5px 10px rgba(0, 0, 0, 0.413);
-      background-color: rgba(255, 0, 0, 0.616);
+      background-color: rgba(255, 0, 0, 0);
       border-radius: 15px;
       backdrop-filter: blur(5px) saturate(250%);
       border: var(--border);

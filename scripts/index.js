@@ -13,7 +13,7 @@ export const languages = {
   }
 }
 
-function getYouTubeThumbnail(videoUrl) {
+export function getYouTubeThumbnail(videoUrl) {
   const videoId = videoUrl.split("v=")[1]?.split("&")[0]; // extract the ID from the URL
   if (!videoId) return null;
   
@@ -22,13 +22,12 @@ function getYouTubeThumbnail(videoUrl) {
 
 
 class Project {
-  constructor(title, description, link, language) {
+  constructor(title, description, link, thumbnail, language) {
     this.title = title;
     this.description = description;
     this.link = link;
+    this.thumbnail = thumbnail;
     this.language = language;
-    this.thumbnail = getYouTubeThumbnail(link);
-    
 
   }
 
