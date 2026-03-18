@@ -158,7 +158,7 @@ function tool_tip_eff(x, y) {
         tool_tip.style.left = x + 15 + "px"
         tool_tip.style.top = y + 10 + "px"
         tool_tip.style.visibility = "visible"
-        tool_tip_text.textContent = element.dataset.tool_tip
+        tool_tip_text.innerHTML = element.dataset.tool_tip
     } else {
         tool_tip.style.visibility = "hidden"
     }
@@ -185,7 +185,7 @@ if (carouselExampleDark) {
         {
             url: "https://tr.rbxcdn.com/180DAY-c8bbcda80275d8c00215dbea1942f756/768/432/Image/Webp/noFilter",
             title: "1. Lucky block Fights",
-            description: "A game i made in about a month or so. You simply open lucky blocks and fight players with the gears u get! I made everything myself, Ui, thumbnail, systems, map. except for the gears <img class='emoji' src='https://media.tenor.com/IzRw2MV7KsgAAAAj/somewhere-wales.gif'> <img class='emoji' src='https://media.tenor.com/dA2e6xOc7sIAAAAi/idk.gif'> (they are from the catalog) and the running animation cuz i'm not an animator"
+            description: "A game i made in about a month or so. You simply open lucky blocks and fight players with the gears u get! I made everything myself, Ui, thumbnail, systems, map. except for the gears <img class='emoji' src='https://media.tenor.com/IzRw2MV7KsgAAAAj/somewhere-wales.gif'> <img class='emoji' src='https://media.tenor.com/dA2e6xOc7sIAAAAi/idk.gif'> (they are from the catalog) and the running animation cuz i'm not an animator. <a href='https://www.roblox.com/games/100992090718210/LuckyBlock-fight' target='_blank'>click here to play</a>"
         },
         {
             url: "/imgs/ContentDDD.webp",
